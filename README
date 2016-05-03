@@ -1,0 +1,28 @@
+Steps
+1.>Extract the tar file
+2.>You will have 5 files
+	char_driver_skelton.c
+	ioctl_entry_test.c
+	userapp.c
+	Makefile
+	Readme
+
+3.>in the same folder enter the command make clean
+4.>Enter make
+5.>Char_driver_skelton.ko file will be created along with userapp and ioctl.
+6.>become the super usr (root).   enter sudo su
+7.> insmod char_driver_skelton.ko NUM_DEVICES=x   where X can be any number.Default is 3.(insmod char_driver_skelton.ko)
+8.>check the devices by writting on the cmd   ls /dev
+9.>To check the read write open and close with lseek entry function use userapp (./userapp x)where x is the the device number that you want to use
+10.>read and write data with offset
+11.>you can always refer to dmesg command to know the flow
+12.>for chcking ioctl entry function run (./ioctl)
+	writting ROHIT123 in normal dirction
+	reading it reverse
+	writting 321TIHOR in reverse direction
+	reading it normal.
+
+
+
+
+
